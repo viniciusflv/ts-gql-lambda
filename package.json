@@ -1,0 +1,31 @@
+{
+  "name": "graphql-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "serverless offline --port 4000",
+    "deploy": "serverless deploy",
+    "serve": "node ./dist/server.js",
+    "build": "tsc",
+    "dev": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/ws": "^6.0.1",
+    "graphql-yoga": "^1.16.7",
+    "nodemon": "^1.19.1",
+    "reflect-metadata": "^0.1.12",
+    "type-graphql": "^0.15.0",
+    "ws": "^7.1.2",
+    "serverless": "^1.51.0",
+    "serverless-offline": "^3.16.0",
+    "serverless-plugin-typescript": "^1.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.18",
+    "typescript": "^3.2.2"
+  }
+}
