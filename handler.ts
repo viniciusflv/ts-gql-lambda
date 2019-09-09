@@ -38,22 +38,20 @@ class Handler {
 
 const handler = new Handler();
 
-export const server = async (
+export const server = (
   e: APIGatewayProxyEvent,
   ctx: Context,
   cb: Callback
 ) => {
-  ctx.callbackWaitsForEmptyEventLoop = false;
-  const lambda = await handler.lambda;
-  return lambda.graphqlHandler(e, ctx, cb);
+  ctx.callbackWaitsForEmptyEventLoop = true;
+  handler.lambda.then((lambda) => lambda.graphqlHandler(e, ctx, cb));
 };
 
-export const playground = async (
+export const playground = (
   e: APIGatewayProxyEvent,
   ctx: Context,
   cb: Callback
 ) => {
-  ctx.callbackWaitsForEmptyEventLoop = false;
-  const lambda = await handler.lambda;
-  return lambda.playgroundHandler(e, ctx, cb);
+  ctx.callbackWaitsForEmptyEventLoop = true;
+  handler.lambda.then((lambda) => lambda.playgroundHandler(e, ctx, cb));
 };
