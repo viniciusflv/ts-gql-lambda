@@ -22,7 +22,7 @@ After cloning, to install the dependencies, run:
 $ npm i
 ```
 
-####Then you'll have two options
+###Then you'll have two options
 
 Start the serverless with:
 
@@ -38,7 +38,7 @@ $ npm run dev
 
 Which runs ``npm run buiild`` and ``npm run serve``
 
-#####Both cases the server will be running on [http://localhost:4000](http://localhost:4000).
+####Both cases the server will be running on [http://localhost:4000](http://localhost:4000).
 
 ## Built With
 
