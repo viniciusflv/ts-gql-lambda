@@ -46,7 +46,3 @@ Which runs ``npm run buiild`` and ``npm run serve``
 * [graphql-yoga](https://github.com/prisma/graphql-yoga) - Fully-featured GraphQL Server with focus on easy setup, performance & great developer experience
 * [TypeScript](https://www.typescriptlang.org) - A typed superset of JavaScript that compiles to clean JavaScript
 * [Serverless](https://serverless.com) - Build apps with radically less overhead and cost
-
-## Acknowledgments
-
-* The creator of TypeGraphQL ([Michał Lytek](https://github.com/19majkel94)) for helping out on the [project chat](https://gitter.im/type-graphql/Lobby)
