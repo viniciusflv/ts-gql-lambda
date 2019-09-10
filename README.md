@@ -1,7 +1,5 @@
 # ts-gql-lambda
 
-Getting started with GraphQL and TypeScript using TypeGraphQL - [https://pusher.com/tutorials/graphql-typescript](https://pusher.com/tutorials/graphql-typescript)
-
 ## Getting Started
 
 Clone the project repository by running the command below if you use SSH
@@ -43,7 +41,7 @@ Which runs ``npm run buiild`` and ``npm run serve``
 
 ## Built With
 
-* [TypeGraphQL](https://19majkel94.github.io/type-graphql) - Modern framework for GraphQL API in Node.js
+* [TypeGraphQL](https://github.com/MichalLytek/type-graphql) - Modern framework for GraphQL API in Node.js
 * [graphql-yoga](https://github.com/prisma/graphql-yoga) - Fully-featured GraphQL Server with focus on easy setup, performance & great developer experience
 * [TypeScript](https://www.typescriptlang.org) - A typed superset of JavaScript that compiles to clean JavaScript
 * [Serverless](https://serverless.com) - Build apps with radically less overhead and cost
