@@ -3,18 +3,7 @@ import "reflect-metadata";
 import { buildSchema } from "type-graphql";
 import * as resolvers from './src/resolvers';
 import { APIGatewayProxyEvent, Context, Callback } from 'aws-lambda';
-
-// const typeDefs = `
-//   type Query {
-//     hello(name: String): String
-//   }
-// `
-
-// const resolvers = {
-//   Query: {
-//     hello: (_, { name }) => `Hello ${name || 'world'}`,
-//   },
-// }
+import { getMetadataStorage } from "type-graphql/dist/metadata/getMetadataStorage";
 
 class Handler {
   public lambda;
@@ -28,11 +17,11 @@ class Handler {
       resolvers: Object.values(resolvers),
       emitSchemaFile: true,
     });
-    return new GraphQLServerLambda({
-      // typeDefs,
-      // resolvers,
-      schema,
-    })
+    // "Fix" for decorators schema redundancy issue
+    if (process.env.IS_OFFLINE) {
+      getMetadataStorage().clear();
+    }
+    return new GraphQLServerLambda({ schema })
   }
 }
 

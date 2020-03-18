@@ -23,8 +23,8 @@ $ npm i
 #### Then you'll have two options
 
 Start the serverless with:
-* PS: Currently is broken due a schema redundancy issue
-* Go to handler.ts and switch the **GraphQLServerLambda** constructor options from **schema** to **typeDefs** and **resolvers**. Make sure to comment the imported **resolvers** and the **buildSchema**
+* PS: Doesn't work with **Subscriptions**
+* [ISSUE](https://github.com/MichalLytek/type-graphql/issues/52)
 ```bash
 $ npm start
 ```
